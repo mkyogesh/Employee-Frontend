@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <style>
+        body {
+        font-family: Arial;
+        background-color: #f0f0f0;
+        padding: 40px;
+        }
+        form {
+        width: 350px;
+        margin: auto;
+        background: white;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px #ccc;
+        }
+        input, select {
+        width: 100%;
+        padding: 8px;
+        margin: 10px 0;
+        }
+        button {
+        background-color: #28a745;
+        color: white;
+        padding: 10px;
+        border: none;
+        width: 100%;
+        border-radius: 5px;
+        }
+        h2 {
+        text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+
+<h2>Register</h2>
+
+<form th:action="@{/register}" th:object="${employee}" method="post" enctype="multipart/form-data">
+    <label>Name:</label>
+    <input type="text" th:field="*{name}" required />
+
+    <label>Email:</label>
+    <input type="email" th:field="*{email}" required />
+
+    <label>Basic Pay:</label>
+    <input type="number" th:field="*{basic_pay}" required />
+
+    <label>Username:</label>
+    <input type="text" th:field="*{username}" required />
+
+    <label>Password:</label>
+    <input type="password" th:field="*{password}" required />
+
+    <label>Role:</label>
+    <select th:field="*{role}" required>
+        <option value="USER">USER</option>
+        <option value="ADMIN">ADMIN</option>
+    </select>
+
+    Profile Image: <input type="file" name="image" /><br/>
+
+    <button type="submit">Register</button>
+</form>
+</body>
+</html>

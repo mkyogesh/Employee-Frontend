@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Employee List</title>
+    <style>
+        body {
+        font-family: Arial;
+        padding: 30px;
+        background-color: #f8f9fa;
+        }
+        h2 {
+        text-align: center;
+        }
+        table {
+        border-collapse: collapse;
+        width: 100%;
+        background: white;
+        box-shadow: 0 0 10px #ccc;
+        }
+        th, td{
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: center;
+        }
+        th {
+        background-color: #007bff;
+        color: white;
+        }
+        a {
+        text-decoration: none;
+        color: #007bff;
+        }
+        a:hover {
+        text-decoration: underline;
+        }
+        .add-btn {
+        display: block;
+        margin-bottom: 15px;
+        padding: 10px 15px;
+        background-color: #28a745;
+        color: white;
+        text-align: center;
+        width: 200px;
+        border-radius: 5px;
+        text-decoration: none;
+        }
+        .logout {
+        float: right;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Employee List</h2>
+
+<div class="logout">
+    Logged in as <b th:text="${#authentication.name}"></b>
+    <a th:href="@{/login}">Logout</a>
+</div>
+
+<div th:if="${userRole == 'ADMIN'}">
+    <a class="add-btn" th:href="@{/employee/add}">+ Add New Employee</a>
+</div>
+
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Basic Pay</th>
+        <th>Username</th>
+        <th>Role</th>
+        <th th:if="${userRole == 'ADMIN'}">Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="emp : ${employees}">
+        <td th:text="${emp.id}"></td>
+        <td th:text="${emp.name}"></td>
+        <td th:text="${emp.email}"></td>
+        <td th:text="${emp.basic_pay}"></td>
+        <td th:text="${emp.username}"></td>
+        <td th:text="${emp.role}"></td>
+
+        <td th:if="${userRole == 'ADMIN'}">
+            <a th:href="@{'/employee/edit/' + ${emp.id}}">Edit</a>
+            <a th:href="@{'/employee/delete/' + ${emp.id}}"
+               onclick="return confirm('Are you sure you want to delete?)">Delete</a>
+        </td>
+
+        <td>
+            <img th:src="@{'/employee-photos/' + ${emp.imageName}}" width="80" height="80"/>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
