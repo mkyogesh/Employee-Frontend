@@ -1,0 +1,83 @@
+# Employee Management System – Frontend
+
+A Spring Boot–based Employee Management frontend application that provides
+authentication, employee CRUD operations, and role-based access using
+Spring Security and Thymeleaf.
+
+This project is designed as a simple HR-style system to manage employees
+through a web interface.
+
+---
+
+## 🚀 Features
+
+- User registration and login
+- Role-based authentication (Admin / User)
+- Add, update, view, and delete employees
+- Secure login using Spring Security
+- Thymeleaf-based UI templates
+- Image support for employee profiles
+
+---
+
+## 🛠️ Tech Stack
+
+- **Backend:** Spring Boot, Spring MVC
+- **Security:** Spring Security
+- **Frontend:** Thymeleaf, HTML, CSS
+- **Database:** (Configure as needed – MySQL / H2)
+- **Build Tool:** Maven
+- **Java Version:** Java 17+
+
+---
+
+## 📂 Project Structure
+
+EmployeeFrontend/
+├── src/main/java
+│ ├── controller
+│ ├── service
+│ ├── repository
+│ ├── model
+│ └── security
+├── src/main/resources
+│ ├── templates
+│ └── application.properties
+├── employee-photos
+├── pom.xml
+└── README.md
+
+---
+
+## 🔐 Authentication
+
+- Login page for registered users
+- Role-based access control
+- Admin users can manage employees
+- Normal users have limited access
+
+---
+
+## 📸 Screenshots
+
+### 🔑 Login Page
+![Login Page](screenshots/login.png)
+
+### 📝 Registration Page
+![Register Page](screenshots/register.png)
+
+### 👥 Employee List
+![Employee List](screenshots/employeelist.png)
+
+### ➕ Add Employee
+![Add Employee](screenshots/employee_form.png)
+
+
+---
+
+## ▶️ How to Run the Project
+
+1. Clone the repository
+   ```bash
+   git clone https://github.com/mkyogesh/Employee-Frontend.git
+
