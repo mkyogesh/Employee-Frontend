@@ -74,7 +74,7 @@ EmployeeFrontend/
 
 
 ---
-<pre>
+
 ## ▶️ How to Run the Project
 
 1. Clone the repository
@@ -83,6 +83,7 @@ EmployeeFrontend/
 
 2. Configure database in application.properties
 
+<pre>
 spring.application.name=EmployeeFrontend
 spring.datasource.url=jdbc:mysql://localhost:3306/sample
 spring.datasource.username=root
@@ -93,6 +94,7 @@ spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
 spring.servlet.multipart.max-file-size=10MB
 spring.servlet.multipart.max-request-size=10MB
+</pre>
 
 3. Run the application
 
@@ -101,4 +103,3 @@ mvn spring-boot:run
 4. Open in browser
 
 http://localhost:8080
-</pre>
