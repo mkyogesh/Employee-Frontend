@@ -74,7 +74,7 @@ EmployeeFrontend/
 
 
 ---
-
+<pre>
 ## ▶️ How to Run the Project
 
 1. Clone the repository
@@ -101,3 +101,4 @@ mvn spring-boot:run
 4. Open in browser
 
 http://localhost:8080
+</pre>
