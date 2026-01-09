@@ -83,9 +83,16 @@ EmployeeFrontend/
 
 2. Configure database in application.properties
 
-spring.datasource.url=jdbc:mysql://localhost:3306/your_db
-spring.datasource.username=your_username
-spring.datasource.password=your_password
+spring.application.name=EmployeeFrontend
+spring.datasource.url=jdbc:mysql://localhost:3306/sample
+spring.datasource.username=root
+spring.datasource.password=root
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.servlet.multipart.max-file-size=10MB
+spring.servlet.multipart.max-request-size=10MB
 
 3. Run the application
 
