@@ -81,3 +81,16 @@ EmployeeFrontend/
    ```bash
    git clone https://github.com/mkyogesh/Employee-Frontend.git
 
+2. Configure database in application.properties
+
+spring.datasource.url=jdbc:mysql://localhost:3306/your_db
+spring.datasource.username=your_username
+spring.datasource.password=your_password
+
+3. Run the application
+
+mvn spring-boot:run 
+
+4. Open in browser
+
+http://localhost:8080
