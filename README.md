@@ -1,11 +1,11 @@
 # Employee Management System – Frontend
 
 A Spring Boot–based Employee Management frontend application that provides
-authentication, employee CRUD operations, and role-based access using
+secure authentication, employee CRUD operations, and role-based access using
 Spring Security and Thymeleaf.
 
-This project is designed as a simple HR-style system to manage employees
-through a web interface.
+This project is designed as a simple HR-style system to manage employee records
+through a clean and secure web interface.
 
 ---
 
@@ -16,7 +16,7 @@ through a web interface.
 - Add, update, view, and delete employees
 - Secure login using Spring Security
 - Thymeleaf-based UI templates
-- Image support for employee profiles
+- Employee profile image upload support
 
 ---
 
@@ -25,29 +25,29 @@ through a web interface.
 - **Backend:** Spring Boot, Spring MVC
 - **Security:** Spring Security
 - **Frontend:** Thymeleaf, HTML, CSS
-- **Database:** (Configure as needed – MySQL / H2)
+- **Database:** MySQL / H2 (configurable)
 - **Build Tool:** Maven
 - **Java Version:** Java 17+
 
 ---
 
-## 📂 Project Structure
-
+<pre>
 EmployeeFrontend/
 ├── src/main/java
-│ ├── controller
-│ ├── service
-│ ├── repository
-│ ├── model
-│ └── security
+│   ├── controller
+│   ├── service
+│   ├── repository
+│   ├── model
+│   └── security
 ├── src/main/resources
-│ ├── templates
-│ └── application.properties
+│   ├── templates
+│   └── application.properties
 ├── employee-photos
+├── screenshots
 ├── pom.xml
 └── README.md
+</pre>
 
----
 
 ## 🔐 Authentication
 
